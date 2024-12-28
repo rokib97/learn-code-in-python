@@ -63,13 +63,11 @@ main()
 def hours_to_second(hours):
     return hours * 60 * 60
     
-    
 result = hours_to_second(2)
 print(result)
     
 
 # Multiple return values
-
 def cast_iceblast(wizard_level, start_mana):
     damage = wizard_level * 2
     new_mana = start_mana - 10
