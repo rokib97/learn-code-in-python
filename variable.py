@@ -91,3 +91,17 @@ game_four_score = 105
 total = game_one_score + game_two_score + game_three_score + game_four_score
 average_score = total / 4
 print(round(average_score))
+
+
+#Topics Covered
+# Variables
+# Comments
+# Basic Variable Types
+# F-strings in Python
+# NoneType Variables
+# Dynamic Typing
+# Math With Strings
+# Multi-Variable Declaration
+# avg calculator
+# print() Function
+
