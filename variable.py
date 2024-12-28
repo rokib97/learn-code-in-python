@@ -100,7 +100,7 @@ print(round(average_score))
 # F-strings in Python
 # NoneType Variables
 # Dynamic Typing
-# Math With Strings
+# Math With Strings | String Concatenation
 # Multi-Variable Declaration
 # avg calculator
 # print() Function
