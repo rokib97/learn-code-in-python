@@ -131,3 +131,16 @@ def shadow_example():
 
 shadow_example()
 print(x)  # Output: 5
+
+
+#Topics Covered:
+# Scope
+# Local Scope
+# Enclosing Scope
+# Global Scope
+# Built-in Scope
+# Variable Shadowing
+# The LEGB Rule
+# Nonlocal Keyword
+# Global Keyword
+# =============================================================== #

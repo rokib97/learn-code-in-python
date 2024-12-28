@@ -95,4 +95,13 @@ result = add_two_num(10,100)
 print(result)
 
 
-
+#Topics Covered
+# Functions
+# Function Parameters
+# Function Return Values
+# Function Scope
+# Function Order
+# Function Default Values
+# Function Multiple Return Values
+# Function Multiple Parameters
+# Function Multiple Return Values
