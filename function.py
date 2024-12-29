@@ -95,6 +95,30 @@ result = add_two_num(10,100)
 print(result)
 
 
+# Calculate the total XP
+def total_xp(level,xp_to_add):
+    total_xp = level * 100
+    total_xp += xp_to_add
+    return total_xp
+    
+total_xp_result =total_xp(1,100)
+total_xp_result1 =total_xp(2,150)
+print(f"Total XP: {total_xp_result1}")
+
+# Calculate the new health after taking magic damage 
+def take_magic_damage(health, resist,apm,spell_power):
+    total_maximum_damage = apm * spell_power
+    actual_damage_dealt = total_maximum_damage - resist
+    new_health = health - actual_damage_dealt
+    return new_health
+    
+print(take_magic_damage(100, 10, 5, 20))
+
+
+
+
+
+    
 #Topics Covered
 # Functions
 # Function Parameters
