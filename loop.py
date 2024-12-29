@@ -85,3 +85,34 @@ total_damage = calculate_flurry_crit(5, 10)
 # print(total_damage)
 
 
+
+def calculate_experience_points(level):
+    total_xp = 0
+    for current_level in range(1, level):
+        total_xp += current_level * 5
+    return total_xp
+
+total_xp = calculate_experience_points(4)
+# print(total_xp)
+
+
+def is_prime(number):
+    if number <= 1:
+        return "Try Positive Number"      
+    for num in range(2, number):
+        if number % num == 0:
+            return False 
+        return True
+result = is_prime(4)
+print(result)
+
+
+def meditate(mana, max_mana, energy, energy_drinks):
+    while mana < max_mana and (energy > 0 or energy_drinks > 0):
+        if energy > 0:
+            mana += 1
+            energy += 1
+        elif energy_drinks > 0:
+            energy += 50
+            energy_drinks -= 1
+    return mana, energy, energy_drinks
