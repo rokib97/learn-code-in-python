@@ -82,3 +82,10 @@ def combat_evaluation(player_power, enemy_defense):
     else:
         evenly_matched = True
     return advantage, disadvantage, evenly_matched
+
+
+def has_enough_energy(energy_available, distance_one_way, meters_per_energy):
+    total_distance = distance_one_way * 2
+    energy_nedded = total_distance / meters_per_energy
+    
+    return energy_available >= energy_nedded
