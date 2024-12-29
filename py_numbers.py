@@ -60,3 +60,22 @@ def get_hurt(current_health,damage):
     return current_health
 
 # print(get_hurt(100, 10))
+
+
+# Calculate DPS
+def calculate_dps(damage, time):
+    dps = damage / time
+    return dps
+
+print(calculate_dps(8_000_000, 45))
+print(calculate_dps(10_000_000, 49))
+
+
+def binary_string_to_int(num_servers, num_players,num_admins):
+    data_a = int(num_servers, 2)
+    data_b = int(num_players, 2)
+    data_c = int(num_admins, 2)
+    return data_a, data_b, data_c
+    
+data_a, data_b, data_c = binary_string_to_int("101", "110", "111")
+print(data_a, data_b, data_c)
