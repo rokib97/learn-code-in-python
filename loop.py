@@ -116,3 +116,5 @@ def meditate(mana, max_mana, energy, energy_drinks):
             energy += 50
             energy_drinks -= 1
     return mana, energy, energy_drinks
+
+
