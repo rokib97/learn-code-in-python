@@ -156,3 +156,81 @@ def get_odd_numbers(num):
     return odd_numbers
 
 # print(get_odd_numbers(9))
+
+#slicing
+
+scores = [50, 70, 30, 20, 90, 10, 50]
+
+def get_champion_slices(champions):
+    value1 = champions[2:]
+    value2 = champions[:-2]
+    value3 = champions[::2]
+    
+    return value1, value2, value3
+# print(get_champion_slices(['rahim', "karim", "sakib", "babu", "tani"]))
+
+
+def concatenate_favorites(favorite_weapons, favorite_armor, favorite_items):
+    return favorite_weapons + favorite_armor + favorite_items
+
+# print(concatenate_favorites(["knife"],["shield"],["dragger"]))
+
+
+def is_top_weapon(weapon):
+    top_weapons = [
+        "sword of justice",
+        "sword of slashing",
+        "stabby daggy",
+        "great axe",
+        "silver bow",
+        "spellbook",
+        "spiked knuckles",
+    ]
+    return weapon in top_weapons
+            
+# print(is_top_weapon("silver"))
+nums = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+del nums[-2:]
+
+
+def trim_strongholds(strongholds):
+    del strongholds[0]
+    del strongholds[-2:]
+    
+
+# Tuples
+my_tuple = ("hello",45, True)
+dog_name, dog_age, is_dog = my_tuple
+# print(my_tuple[1])
+dog = ('Fodo',)
+
+my_tuples2 = [("this is the first tuple in the list", 45, True),("this is the second tuple in the list", 21, False)]
+
+# print(my_tuples2[0][1])
+
+
+def get_heroes():
+    heroes = [
+        ("Glorfindel",2093,True),
+        ("Gandalf",1054,False),
+        ("Gimli",389,False),
+        ("Aragorn",87,False)
+    ]
+
+    return heroes
+
+
+# print(type(get_heroes()))
+
+
+def get_first_item(items):
+    return items[0]
+
+
+def reverse_array(items):
+    new_arr = []
+    for i in range(len(items) -1, -1, -1):
+        new_arr.append(items[i])
+    return new_arr
+
+print(reverse_array([1, 2, 3]))
