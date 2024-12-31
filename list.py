@@ -261,4 +261,43 @@ def filter_messages(messages):
 
 
 messages = ["dang it bobby!", "look at it go"]
-print(filter_messages(messages)) 
+# print(filter_messages(messages)) 
+
+
+def get_odds_and_evens(numbers):
+    num_odds = 0
+    num_evens = 0
+    
+    for num in numbers:
+        if num % 2 == 0:
+            num_evens += 1
+        else:
+            num_odds += 1
+    return [num_evens, num_odds]
+
+# print(get_odds_and_evens([23,4,44,2,3,6,7]))
+
+def split_players_into_teams(players):
+    even_teams = players[0::2]
+    even_teams = players[1::2]
+    
+    
+def check_ingredient_match(recipe, ingredients):
+    count_ingredient = 0
+    missing_ingredients = []
+    for item in recipe:
+        if not item in ingredients:
+            missing_ingredients.append(item)
+        else:
+            count_ingredient += 1
+    percentage_of_ingredients = (count_ingredient / len(ingredients)) * 100
+    
+    return percentage_of_ingredients, missing_ingredients
+recipe = ["Dragon Scale", "Unicorn Hair", "Phoenix Feather", "Troll Tusk"]
+ingredients = ["Dragon Scale", "Goblin Ear", "Phoenix Feather", "Troll Tusk"]
+
+# print(check_ingredient_match(recipe, ingredients))
+
+
+
+
