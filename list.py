@@ -243,8 +243,6 @@ def filter_messages(messages):
     filtered_msg = []
     count_of_words = []
     
-    
-    
     for msg in messages:
         words = msg.split()
         non_bad_words =[]
@@ -299,5 +297,26 @@ ingredients = ["Dragon Scale", "Goblin Ear", "Phoenix Feather", "Troll Tusk"]
 # print(check_ingredient_match(recipe, ingredients))
 
 
+def validate_path(expected_path, character_path):
+    name = character_path[:1]
+    count = 0
+    for index in range(len(expected_path)):
+        if expected_path[index] == character_path[index + 1]:
+            count += 1
+        
+    return name, count / len(expected_path) * 100
+        
+
+expected_path = ["A", "B", "C", "D"]
+character_path = ["Hero123", "A", "C", "B", "D"]
+# print(validate_path(expected_path, character_path))
 
 
+def double_string(string):
+    doubled_string = []
+    for char in string:
+        doubled_string.append(char * 2)
+        
+    return "".join(doubled_string)
+
+# print(double_string("Rokib"))
