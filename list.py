@@ -233,4 +233,32 @@ def reverse_array(items):
         new_arr.append(items[i])
     return new_arr
 
-print(reverse_array([1, 2, 3]))
+# print(reverse_array([1, 2, 3]))
+
+message = "hello there sam"
+splited = message.split()
+# print("".join(splited))
+
+def filter_messages(messages):
+    filtered_msg = []
+    count_of_words = []
+    
+    
+    
+    for msg in messages:
+        words = msg.split()
+        non_bad_words =[]
+        counter = 0
+        for word in words:
+            if word == "dang":
+                counter += 1
+            else:
+                non_bad_words.append(word)
+            
+        filtered_msg.append(" ".join(non_bad_words))
+        count_of_words.append(counter)
+    return filtered_msg, count_of_words
+
+
+messages = ["dang it bobby!", "look at it go"]
+print(filter_messages(messages)) 
