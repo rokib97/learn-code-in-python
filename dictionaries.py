@@ -96,4 +96,38 @@ my_dict = {
     "gremlin": 5  
 }
 
-print(get_most_common_enemy(my_dict))
+# print(get_most_common_enemy(my_dict))
+
+
+
+def get_quest_status(progress):
+    return progress["entity"]['character']['quests']['Dragon_Slayer']['status']
+
+result = get_quest_status({
+    "entity": {
+        "character": {
+            "name": "Kaladin",
+            "quests": {
+                "Dragon_Slayer": {
+                    "status": "In Progress",
+                },
+                "talk_to_syl": {
+                    "status": "Completed",
+                },
+            },
+        }
+    }
+})
+
+# print(result)
+
+
+def merge(dict1, dict2):
+    merged_dict = {}
+    for key in dict1:
+        merged_dict[key] = dict1[key]
+    for key in dict2:
+        merged_dict[key] = dict2[key]   
+two_towers = {"Frodo": "One Ring", "Aragorn": "Narsil"}
+rotk = {"Aragorn": "Andúril", "Gandalf": "Glamdring"}
+merged_dict = merge(two_towers, rotk)
