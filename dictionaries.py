@@ -128,6 +128,23 @@ def merge(dict1, dict2):
         merged_dict[key] = dict1[key]
     for key in dict2:
         merged_dict[key] = dict2[key]   
+        
 two_towers = {"Frodo": "One Ring", "Aragorn": "Narsil"}
 rotk = {"Aragorn": "Andúril", "Gandalf": "Glamdring"}
 merged_dict = merge(two_towers, rotk)
+
+
+def total_score(score_dict):
+    sum = 0
+    for key in score_dict:
+        sum += score_dict[key]
+
+    return sum
+scores = {"Frodo": 10, "Aragorn": 20, "Gandalf": 30}
+# print(total_score(scores))
+
+
+
+
+
+
