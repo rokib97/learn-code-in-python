@@ -148,3 +148,36 @@ scores = {"Frodo": 10, "Aragorn": 20, "Gandalf": 30}
 
 
 
+def calculate_total(items_purchased, pinned_list):
+    unpurchased_items = []
+    receipt = {}
+    sum = 0
+    item_prices = {
+        "health_potion": 10.00,
+        "mana_potion": 12.00,
+        "gold_dust": 5.00,
+        "dwarven_ale": 8.00,
+        "enchanted_scroll": 25.00,
+        "ice_cold_milk": 50.00,
+        "herbs": 7.00,
+        "crystal_shard": 20.00,
+        "magic_ring": 100.00,
+        "mystic_amulet": 150.00,
+    }
+    for item in pinned_list:
+        if(item not in items_purchased):
+            unpurchased_items.append(item)
+    
+    for purchase in items_purchased:
+        if purchase in item_prices:
+            receipt[purchase] = item_prices[purchase]
+        
+    for price in receipt:
+        sum += receipt[price]
+        
+    return unpurchased_items, receipt, sum
+ 
+items_purchased = ["health_potion", "gold_dust", "magic_ring"]
+pinned_list = ["health_potion", "mana_potion", "magic_ring", "mystic_amulet"]
+
+print(calculate_total(items_purchased, pinned_list))
