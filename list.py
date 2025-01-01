@@ -286,7 +286,7 @@ def check_ingredient_match(recipe, ingredients):
     for item in recipe:
         if not item in ingredients:
             missing_ingredients.append(item)
-        else:
+
             count_ingredient += 1
     percentage_of_ingredients = (count_ingredient / len(ingredients)) * 100
     
