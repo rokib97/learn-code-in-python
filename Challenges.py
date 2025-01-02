@@ -84,9 +84,37 @@ def fizzbuzz(start, end):
         elif i % 5 == 0:
             my_list.append("buzz")
         elif i % 3 == 0:
-            my_list.append("buzz")
+            my_list.append("fizz")
         else:
             my_list.append(i)
     return my_list
 
-print(fizzbuzz(1,8))
+# print(fizzbuzz(1,8))
+
+
+def divide_list(nums, divisor):
+    new_list = []
+    for num in nums:
+        if num % divisor == 0:
+            new_list.append(num / divisor)
+    return new_list
+
+divided_list = divide_list([6, 8, 10], 2)
+# print(divided_list) 
+
+
+
+def join_strings(strings):
+    print(len(strings))
+    new_string = ''
+    for i in range(len(strings)):
+        new_string += strings[i]
+        
+        if(i < len(string_list) -1):
+            new_string += ','
+        
+
+    print(new_string)
+string_list = ["hello", "my", "friend"]
+joined_string = join_strings(string_list)
+print(joined_string) # "hello,my,friend"
