@@ -45,6 +45,48 @@ def factorial_recursive(num):
         return num * factorial_recursive(num - 1)
     
 try:
-    print(factorial_recursive(-1))
+    pass
+    # print(factorial_recursive(-1))
 except ValueError as e :
-    print(e)
+    pass
+    # print(e)
+    
+    
+    
+def area_sum(rectangles):
+    sum = 0
+    for item in rectangles:
+        sum += item['height'] * item['width']
+        
+    
+    return sum
+
+    
+
+area_sum([
+    {
+        "height": 3,
+        "width": 9
+    },
+    {
+        "height": 3,
+        "width": 3
+    }
+])
+    
+    
+    
+def fizzbuzz(start, end):
+    my_list =[]
+    for i in range(start, end):
+        if i % 5 == 0 and i % 3 == 0:
+            my_list.append("fizzbuzz")
+        elif i % 5 == 0:
+            my_list.append("buzz")
+        elif i % 3 == 0:
+            my_list.append("buzz")
+        else:
+            my_list.append(i)
+    return my_list
+
+print(fizzbuzz(1,8))
